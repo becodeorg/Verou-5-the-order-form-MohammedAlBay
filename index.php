@@ -67,6 +67,10 @@ function validate() {
     if (!is_integer($_POST['zipcode'])) {
       echo "<p class = 'alert alert-warning'> Zipcode can only contain a number!</p>";
     }
+    // Check for valid email address:
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+      echo "<p class= 'alert alert-warning'> Invalid email address!</p>";
+    }
     return [];
 }
 
