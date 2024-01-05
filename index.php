@@ -62,16 +62,19 @@ function validate() {
     }
     if (!empty($emptyFields)) {
       echo "<p class = 'alert alert-danger'> All fields must be filled in.</p>";
+      $error = true;
     }
     // Check for number format zipcode:
     if (!is_integer($_POST['zipcode'])) {
       echo "<p class = 'alert alert-warning'> Zipcode can only contain a number!</p>";
+      $error = true;
     }
     // Check for valid email address:
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       echo "<p class= 'alert alert-warning'> Invalid email address!</p>";
+      $error = true;
     }
-    return [];
+    return $error;
 }
 
 function handleForm()
