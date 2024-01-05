@@ -30,6 +30,14 @@ $products = [
     ['name' => 'Stardust', 'price' => 13.99]
 ];
 
+$productsB = [
+  ['name' => 'The Girl with the Dragon Tattoo', 'price' => 9.99], 
+  ['name' => 'A Clash of Kings', 'price' => 12.99],
+  ['name' => 'The Wheel of Time - 1', 'price' => 10.99],
+  ['name' => 'A Murder Is Announced', 'price' => 15.50],
+  ['name' => 'The Da Vinci Code', 'price' => 25.00]
+];
+
 $totalValue = 0;
 
 function validate()
