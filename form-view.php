@@ -16,18 +16,21 @@
   <h1>Welcome to Media Heaven</h1>
     <h2>Place your order</h2>
     <?php // Navigation for when you need it ?>
-    <?php /*
+
     <nav>
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link active" href="?food=1">Order food</a>
+                <a class="nav-link active" href="?cat=0">All</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?food=0">Order drinks</a>
+                <a class="nav-link active" href="?cat=1">Films</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?cat=2">Books</a>
             </li>
         </ul>
     </nav>
-    */ ?>
+  
     <form method="POST">
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -63,22 +66,13 @@
         </fieldset>
 
         <fieldset>
-            <legend>Films</legend>
+            <legend>Products</legend>
             <?php foreach ($products as $i => $product): ?>
                 <label>
-					<?php // <?= is equal to <?php echo ?>
-                    <input type="checkbox" value="1" name="products[<?php echo $i ?>]"/> <?php echo $product['name'] ?> -
-                    &euro; <?= number_format($product['price'], 2) ?></label><br />
-            <?php endforeach; ?>
-        </fieldset>
-
-        <fieldset>
-            <legend>Books</legend>
-            <?php foreach ($productsB as $i => $product): ?>
-                <label>
-					<?php // <?= is equal to <?php echo ?>
-                    <input type="checkbox" value="1" name="productsB[<?php echo $i ?>]"/> <?php echo $product['name'] ?> -
-                    &euro; <?= number_format($product['price'], 2) ?></label><br />
+					  <?php // <?= is equal to <?php echo ?>
+                    <input type="checkbox" value="1" name="products[<?php echo $i ?>]"/> 
+                    <?php echo $product['name'] ?> - &euro; <?= number_format($product['price'], 2) ?>
+                </label><br/>
             <?php endforeach; ?>
         </fieldset>
 
