@@ -63,6 +63,10 @@ function validate() {
     if (!empty($emptyFields)) {
       echo "<p class = 'alert alert-danger'> All fields must be filled in.</p>";
     }
+    // Check for number format zipcode:
+    if (!is_integer($_POST['zipcode'])) {
+      echo "<p class = 'alert alert-warning'> Zipcode can only contain a number!</p>";
+    }
     return [];
 }
 
