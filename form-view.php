@@ -63,7 +63,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Products</legend>
+            <legend>Films</legend>
             <?php foreach ($products as $i => $product): ?>
                 <label>
 					<?php // <?= is equal to <?php echo ?>
@@ -73,7 +73,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Products</legend>
+            <legend>Books</legend>
             <?php foreach ($productsB as $i => $product): ?>
                 <label>
 					<?php // <?= is equal to <?php echo ?>
