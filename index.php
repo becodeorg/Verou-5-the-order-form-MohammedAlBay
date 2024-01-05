@@ -38,6 +38,7 @@ $productsB = [
   ['name' => 'The Da Vinci Code', 'price' => 25.00]
 ];
 
+// TODO: Allow for navigation through product categories
 if (!isset($_GET['cat']) || $_GET['cat'] == 0) {
   $products = array_merge($productsA, $productsB);
 } else if ($_GET['cat'] == 1) {
