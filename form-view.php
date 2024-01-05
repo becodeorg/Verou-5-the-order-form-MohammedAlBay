@@ -72,6 +72,16 @@
             <?php endforeach; ?>
         </fieldset>
 
+        <fieldset>
+            <legend>Products</legend>
+            <?php foreach ($productsB as $i => $product): ?>
+                <label>
+					<?php // <?= is equal to <?php echo ?>
+                    <input type="checkbox" value="1" name="productsB[<?php echo $i ?>]"/> <?php echo $product['name'] ?> -
+                    &euro; <?= number_format($product['price'], 2) ?></label><br />
+            <?php endforeach; ?>
+        </fieldset>
+
         <button type="submit" class="btn btn-primary">Order!</button>
     </form>
 
