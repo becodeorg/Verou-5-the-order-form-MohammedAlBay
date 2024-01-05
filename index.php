@@ -22,7 +22,7 @@ function whatIsHappening() {
 }
 
 // TODO: provide some products (you may overwrite the example)
-$products = [
+$productsA = [
     ['name' => 'The Lord of the Rings: The Fellowship of the Ring"', 'price' => 6.99], 
     ['name' => 'Harry Potter and the Philosopher\'s Stone', 'price' => 4.99],
     ['name' => 'Pan\'s Labyrinth', 'price' => 6.99],
@@ -37,6 +37,14 @@ $productsB = [
   ['name' => 'A Murder Is Announced', 'price' => 15.50],
   ['name' => 'The Da Vinci Code', 'price' => 25.00]
 ];
+
+if (!isset($_GET['cat']) || $_GET['cat'] == 0) {
+  $products = array_merge($productsA, $productsB);
+} else if ($_GET['cat'] == 1) {
+  $products = $productsA;
+} else if ($_GET['cat'] == 2) {
+  $products = $productsB;
+}
 
 $totalValue = 0;
 
