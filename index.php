@@ -49,9 +49,20 @@ if (!isset($_GET['cat']) || $_GET['cat'] == 0) {
 
 $totalValue = 0;
 
-function validate()
-{
+function validate() {
     // TODO: This function will send a list of invalid fields back
+    $error = false;
+    // Check for empty fields:
+    $required = ['email', 'street', 'streetnumber', 'city', 'zipcode'];
+    $emptyFields = [];
+    foreach ($required as $field) {
+      if (empty($_POST[$field])) {
+        $emptyFields[] = $field;
+      }
+    }
+    if (!empty($emptyFields)) {
+      echo "<p class = 'alert alert-danger'> All fields must be filled in.</p>";
+    }
     return [];
 }
 
