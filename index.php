@@ -23,7 +23,11 @@ function whatIsHappening() {
 
 // TODO: provide some products (you may overwrite the example)
 $products = [
-    ['name' => 'Your favourite drink', 'price' => 2.5],
+    ['name' => 'The Lord of the Rings: The Fellowship of the Ring"', 'price' => 6.99], 
+    ['name' => 'Harry Potter and the Philosopher\'s Stone', 'price' => 4.99],
+    ['name' => 'Pan\'s Labyrinth', 'price' => 6.99],
+    ['name' => 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe', 'price' => 8.99],
+    ['name' => 'Stardust', 'price' => 13.99]
 ];
 
 $totalValue = 0;
