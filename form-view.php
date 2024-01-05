@@ -13,7 +13,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>Place your order</h1>
+  <h1>Welcome to Media Heaven</h1>
+    <h2>Place your order</h2>
     <?php // Navigation for when you need it ?>
     <?php /*
     <nav>
