@@ -65,7 +65,7 @@ function validate() {
       $error = true;
     }
     // Check for number format zipcode:
-    if (!is_integer($_POST['zipcode'])) {
+    if (!filter_var($_POST['zipcode'], FILTER_VALIDATE_INT)) {
       echo "<p class = 'alert alert-warning'> Zipcode can only contain a number!</p>";
       $error = true;
     }
@@ -88,6 +88,11 @@ function handleForm()
     } else {
         // TODO: handle successful submission
     }
+}
+
+if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+  handleForm();
+  # code...
 }
 
 // TODO: replace this if by an actual check for the form to be submitted
