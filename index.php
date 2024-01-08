@@ -47,6 +47,13 @@ if (!isset($_GET['cat']) || $_GET['cat'] == 0) {
   $products = $productsB;
 }
 
+// TODO: Initializing form:
+$formSubmitted = false;
+$email = $_SESSION['email'] ?? '';
+$street = $_SESSION['street'] ?? '';
+$streetnumber = $_SESSION['streetnumber'] ?? '';
+$city = $_SESSION['city'] ?? '';
+$zipcode = $_SESSION['zipcode'] ?? '';
 $totalValue = 0;
 
 function validate() {
@@ -90,10 +97,6 @@ function handleForm()
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-  handleForm();
-  # code...
-}
 
 // TODO: replace this if by an actual check for the form to be submitted
 $formSubmitted = false;
